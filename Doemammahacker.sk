@@ -1,0 +1,13 @@
+on join:
+	execute player command "/ruhacker"
+
+command /ruhacker:
+  permission: 
+  permission message: "&7You do &r&anot have permission&r&7 to execute this command!"
+  trigger:
+    wait 3 ticks
+    open chest with 1 rows named "&2RUHacker" to player
+    format slot 0 of player with redstone block named "&byes" with lore "I am a hacker" to close then run [execute console command "/say %player% Is Not Hacking"]
+    format slot 1 of player with emerald block named "&bno" with lore "Im not a hacker" to close then run [execute console command "/ban %player% No Hacking"]
+
+ 
